@@ -5,6 +5,7 @@
   line-height: 1.5;
   font-weight: 400;
   color: $blanco;
+  background-color: $negro-profundo;
 
   color-scheme: light dark;
 
@@ -20,9 +21,4 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-image: url('./assets/imagenes/mielmadev/MielmaDevAlas.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
