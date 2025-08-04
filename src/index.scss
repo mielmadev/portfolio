@@ -1,8 +1,10 @@
+@use './estilos/var/colores.scss' as *;
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: whitesmoke;
+  color: $blanco;
 
   color-scheme: light dark;
 
