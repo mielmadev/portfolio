@@ -1,0 +1,42 @@
+@keyframes bordesAnimados {
+  0% {
+    --borde: 25px;
+  }
+
+  25% {
+    --borde: 40px;
+  }
+
+  50% {
+    --borde: 60px;
+  }
+
+  75% {
+    --borde: 35px;
+  }
+
+  100% {
+    --borde: 25px;
+  }
+}
+
+.img-bordes-animados {
+  --borde: 40px;
+  animation: bordesAnimados 3s ease-in-out infinite;
+
+  mask-image:
+    linear-gradient(to right, transparent 0px, black var(--borde), black calc(100% - var(--borde)), transparent 100%),
+    linear-gradient(to bottom, transparent 0px, black var(--borde), black calc(100% - var(--borde)), transparent 100%);
+  mask-composite: intersect;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0px, black var(--borde), black calc(100% - var(--borde)), transparent 100%),
+    linear-gradient(to bottom, transparent 0px, black var(--borde), black calc(100% - var(--borde)), transparent 100%);
+  -webkit-mask-composite: destination-in;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
+}
