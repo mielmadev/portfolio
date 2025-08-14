@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Preliminar - Paleta de Colores Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2b51b9;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        .color-section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            padding: 10px 0;
+            border-bottom: 3px solid #2b51b9;
+            color: #040405;
+        }
+        
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .color-card {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        
+        .color-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .color-sample {
+            height: 60px;
+            width: 100%;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        
+        .color-info {
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+        
+        .color-name {
+            font-weight: bold;
+            font-size: 0.8em;
+            margin-bottom: 2px;
+            color: white;
+        }
+        
+        .color-hex {
+            font-family: 'Courier New', monospace;
+            font-size: 0.7em;
+            color: white;
+            background: rgba(0,0,0,0.4);
+            padding: 1px 3px;
+            border-radius: 2px;
+        }
+        
+        .contrast-demo {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .contrast-demo h3 {
+            margin-top: 0;
+            color: #2b51b9;
+        }
+        
+        .contrast-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .contrast-card {
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            border: 1px solid #ddd;
+        }
+        
+        .contrast-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .contrast-info {
+            font-size: 0.9em;
+        }
+        
+        .contrast-vars {
+            font-family: 'Courier New', monospace;
+            font-size: 0.8em;
+            margin-top: 5px;
+            opacity: 0.8;
+        }
+        
+        .copy-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #2b51b9;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="copy-notification" id="copyNotification">
+        ¡Código copiado al portapapeles!
+    </div>
+    
+    <div class="container">
+        <h1>🎨 Paleta de Colores - Portfolio</h1>
+        
+        <!-- PALETA COMPLETA -->
+        <div class="color-section">
+            <h2 class="section-title">🎨 Paleta Completa de Colores</h2>
+            <div class="color-grid">
+                <!-- Neutros claros -->
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #e9e9e9; color: #040405;" onclick="copyToClipboard('#e9e9e9')">
+                        <div class="color-info">
+                            <div class="color-name">$blanco</div>
+                            <div class="color-hex">#e9e9e9</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #abacaa;" onclick="copyToClipboard('#abacaa')">
+                        <div class="color-info">
+                            <div class="color-name">$gris-plata</div>
+                            <div class="color-hex">#abacaa</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Colores vibrantes -->
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #2b51b9;" onclick="copyToClipboard('#2b51b9')">
+                        <div class="color-info">
+                            <div class="color-name">$azul</div>
+                            <div class="color-hex">#2b51b9</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #5c55b8;" onclick="copyToClipboard('#5c55b8')">
+                        <div class="color-info">
+                            <div class="color-name">$violeta-claro</div>
+                            <div class="color-hex">#5c55b8</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #bc3897;" onclick="copyToClipboard('#bc3897')">
+                        <div class="color-info">
+                            <div class="color-name">$rosa</div>
+                            <div class="color-hex">#bc3897</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #cc81bd;" onclick="copyToClipboard('#cc81bd')">
+                        <div class="color-info">
+                            <div class="color-name">$rosa-orquidea</div>
+                            <div class="color-hex">#cc81bd</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Neutros medios -->
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #8f8388;" onclick="copyToClipboard('#8f8388')">
+                        <div class="color-info">
+                            <div class="color-name">$malva</div>
+                            <div class="color-hex">#8f8388</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #544b4b;" onclick="copyToClipboard('#544b4b')">
+                        <div class="color-info">
+                            <div class="color-name">$marron-taupe</div>
+                            <div class="color-hex">#544b4b</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #534569;" onclick="copyToClipboard('#534569')">
+                        <div class="color-info">
+                            <div class="color-name">$violeta-medio</div>
+                            <div class="color-hex">#534569</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Colores oscuros -->
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #39353f;" onclick="copyToClipboard('#39353f')">
+                        <div class="color-info">
+                            <div class="color-name">$gris-antracita</div>
+                            <div class="color-hex">#39353f</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #293430;" onclick="copyToClipboard('#293430')">
+                        <div class="color-info">
+                            <div class="color-name">$verde-musgo</div>
+                            <div class="color-hex">#293430</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #28223a;" onclick="copyToClipboard('#28223a')">
+                        <div class="color-info">
+                            <div class="color-name">$azul-pizarra</div>
+                            <div class="color-hex">#28223a</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #262528;" onclick="copyToClipboard('#262528')">
+                        <div class="color-info">
+                            <div class="color-name">$gris-carbon</div>
+                            <div class="color-hex">#262528</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #1b2423;" onclick="copyToClipboard('#1b2423')">
+                        <div class="color-info">
+                            <div class="color-name">$verde-pizarra</div>
+                            <div class="color-hex">#1b2423</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Negros -->
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #040405;" onclick="copyToClipboard('#040405')">
+                        <div class="color-info">
+                            <div class="color-name">$negro</div>
+                            <div class="color-hex">#040405</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background-color: #0d0d0e;" onclick="copyToClipboard('#0d0d0e')">
+                        <div class="color-info">
+                            <div class="color-name">$negro-profundo</div>
+                            <div class="color-hex">#0d0d0e</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EJEMPLOS DE CONTRASTE -->
+        <div class="contrast-demo">
+            <h3>🔍 Combinaciones de Contraste</h3>
+            <p>Haz clic en cualquier combinación para copiar los códigos.</p>
+            
+            <div class="contrast-examples">
+                <div class="contrast-card" style="background-color: #e9e9e9; color: #040405;" onclick="copyToClipboard('bg: #e9e9e9, color: #040405')">
+                    <div class="contrast-info">Texto negro sobre blanco</div>
+                    <div class="contrast-vars">$negro + $blanco</div>
+                </div>
+                
+                <div class="contrast-card" style="background-color: #2b51b9; color: #e9e9e9;" onclick="copyToClipboard('bg: #2b51b9, color: #e9e9e9')">
+                    <div class="contrast-info">Texto blanco sobre azul</div>
+                    <div class="contrast-vars">$blanco + $azul</div>
+                </div>
+                
+                <div class="contrast-card" style="background-color: #bc3897; color: #e9e9e9;" onclick="copyToClipboard('bg: #bc3897, color: #e9e9e9')">
+                    <div class="contrast-info">Texto blanco sobre rosa</div>
+                    <div class="contrast-vars">$blanco + $rosa</div>
+                </div>
+                
+                <div class="contrast-card" style="background-color: #abacaa; color: #040405;" onclick="copyToClipboard('bg: #abacaa, color: #040405')">
+                    <div class="contrast-info">Texto negro sobre gris</div>
+                    <div class="contrast-vars">$negro + $gris-plata</div>
+                </div>
+                
+                <div class="contrast-card" style="background-color: #5c55b8; color: #e9e9e9;" onclick="copyToClipboard('bg: #5c55b8, color: #e9e9e9')">
+                    <div class="contrast-info">Texto blanco sobre violeta</div>
+                    <div class="contrast-vars">$blanco + $violeta-claro</div>
+                </div>
+                
+                <div class="contrast-card" style="background-color: #040405; color: #cc81bd;" onclick="copyToClipboard('bg: #040405, color: #cc81bd')">
+                    <div class="contrast-info">Texto rosa sobre negro</div>
+                    <div class="contrast-vars">$rosa-orquidea + $negro</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                const notification = document.getElementById('copyNotification');
+                notification.style.display = 'block';
+                notification.textContent = `¡Código ${text} copiado!`;
+                
+                setTimeout(function() {
+                    notification.style.display = 'none';
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Error al copiar: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
