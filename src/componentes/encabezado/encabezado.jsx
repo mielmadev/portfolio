@@ -3,12 +3,13 @@ import './encabezado.scss';
 import '@anim/_bordes-animados.scss'
 import LogoMielmaDev from './LogoMielmaDev';
 
-// ...existing code...
+
 
 function Encabezado() {
   return (
     <header>
       <nav className="nav-encabezado">
+        <LogoMielmaDev />
         <ul>
           <li><a href="#sobre-mi">Sobre mí</a></li>
           <li><a href="#proyectos">Proyectos</a></li>
