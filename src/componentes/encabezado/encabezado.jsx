@@ -1,12 +1,12 @@
 import React from 'react';
 import './encabezado.scss';
-import '@anim/bordesanimados.scss'
+import '@anim/_bordes-animados.scss'
 import MielmaDevAlas from '@img/mielmadev/MielmaDevAlas.webp';
 
 function Encabezado() {
   return (
     <header>
-      <div className="logo-mielmadev img-bordes-animados"><img src={MielmaDevAlas} alt="MielmaDevAlas" /></div>
+      <div className="logo-mielmadev bordes-animados"><img src={MielmaDevAlas} alt="MielmaDevAlas" /></div>
       <nav className="nav-encabezado">
         <ul>
           <li><a href="#sobre-mi">Sobre mí</a></li>
