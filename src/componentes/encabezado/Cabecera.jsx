@@ -1,11 +1,11 @@
 import React from 'react';
 import './encabezado.scss';
-import '@anim/_bordes-animados.scss'
+import '@anim/_bordes-animados.scss';
 import LogoMielmaDev from './LogoMielmaDev';
 
 
 
-function Encabezado() {
+function Cabecera() {
   return (
     <header>
       <nav className="nav-encabezado">
@@ -20,4 +20,4 @@ function Encabezado() {
   );
 }
 
-export default Encabezado;
+export default Cabecera;
