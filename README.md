@@ -35,7 +35,7 @@ Este es un portfolio personal desarrollado con React y Vite. Aquí podrás mostr
 
 Modifica los componentes y estilos para adaptar el portfolio a tu perfil y necesidades.
 
-## Créditos
+## Créditos 
 
 Proyecto creado con [Vite](https://vitejs.dev/) y [React](https://react.dev/). 
 Primer despliegue forzado: activando workflow para crear gh-pages.
