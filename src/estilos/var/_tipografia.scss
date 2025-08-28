@@ -1,0 +1,44 @@
+@use './fuentes' as *;
+@use './colores' as *;
+
+h1 {
+  font-family: $metal-mania;
+  color: $azul;
+}
+
+h2 {
+  font-family: $bebas-neue;
+  color: $rosa;
+}
+
+h3 {
+  font-family: $bebas-neue;
+  color: $violeta-claro;
+}
+
+nav {
+  font-family: $montserrat;
+  color: $gris-plata;
+}
+
+nav a {
+  font-family: $montserrat;
+  color: $gris-plata;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: $azul;
+}
+
+ul,
+li {
+  font-family: $rubik-mono-one;
+  color: $gris-plata;
+}
+
+p {
+  font-family: $roboto;
+  color: $blanco;
+}

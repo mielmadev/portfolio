@@ -1,0 +1,36 @@
+@use '@mix/_mixin.scss' as mix;
+@use '@var/_colores.scss' as *;
+@use '@anim/menu-rebote.scss' as anim;
+@use '@var/_variables.scss' as *;
+
+header {
+  @include mix.bordes;
+  position: fixed;
+  width: 100vw;
+  height: $altura-cabecera;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  overflow: auto;
+
+  .titulo-cabecera {
+    animation: menu-rebote 5s ease-in-out infinite alternate;
+    display: inline-block;
+    border-radius: 100px 0px;
+    background: $blanco;
+    padding: 0.75rem 1.5rem;
+    margin: 0 auto;
+    letter-spacing: 0.5rem;
+  }
+
+  .menu-cabecera {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    & a {
+      color: white;
+    }
+  }
+
+}

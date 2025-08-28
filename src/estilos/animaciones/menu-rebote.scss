@@ -1,0 +1,22 @@
+//    animation: menu-rebote 5s ease-in-out infinite alternate;
+@keyframes menu-rebote {
+  0% {
+    transform: translateY(-10px) scale(0.98);
+  }
+
+  40% {
+    transform: translateY(6px) scale(1.02);
+  }
+
+  60% {
+    transform: translateY(-3px) scale(0.99);
+  }
+
+  80% {
+    transform: translateY(2px) scale(1.01);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}

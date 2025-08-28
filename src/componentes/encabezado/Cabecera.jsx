@@ -1,15 +1,16 @@
 import React from 'react';
-import './encabezado.scss';
-import '@anim/_bordes-animados.scss';
-import LogoMielmaDev from './LogoMielmaDev';
+import './Cabecera.scss';
 
 
 
 function Cabecera() {
   return (
     <header>
-      <nav className="nav-encabezado">
-        <ul>
+      <h1 className="titulo-cabecera">
+        Elizabeth Marañón (mielmaDev)
+      </h1>
+      <nav className="nav-cabecera">
+        <ul className='menu-cabecera'>
           <li><a href="#sobre-mi">Sobre mí</a></li>
           <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="#contacto">Contacto</a></li>

@@ -1,4 +1,6 @@
 @use './estilos/var/_colores.scss' as *;
+@use './estilos/var/fuentes' as *;
+@use './estilos/var/_tipografia.scss' as *;
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
