@@ -6,15 +6,16 @@
 header {
   @include mix.bordes;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: $altura-cabecera;
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
+  padding: 0.7rem;
+  gap: 0.5rem;
   overflow: auto;
 
   .titulo-cabecera {
-    animation: menu-rebote 5s ease-in-out infinite alternate;
+    animation: menu-rebote 10s ease-in-out infinite alternate;
     display: inline-block;
     border-radius: 100px 0px;
     background: $blanco;
@@ -23,14 +24,5 @@ header {
     letter-spacing: 0.5rem;
   }
 
-  .menu-cabecera {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-    & a {
-      color: white;
-    }
-  }
-
+  
 }

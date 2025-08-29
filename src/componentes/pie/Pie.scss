@@ -1,0 +1,21 @@
+@use '@var/_variables.scss' as *;
+@use '@mix/_mixin.scss' as mix;
+
+footer {
+  box-sizing: border-box;
+  @include mix.bordes;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: $altura-pie;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .copyright {
+    @include mix.bordes;
+    
+  }
+}

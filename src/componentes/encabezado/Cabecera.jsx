@@ -1,7 +1,6 @@
-import React from 'react';
 import './Cabecera.scss';
-
-
+import './MenuCabecera';
+import MenuCabecera from './MenuCabecera';
 
 function Cabecera() {
   return (
@@ -9,13 +8,7 @@ function Cabecera() {
       <h1 className="titulo-cabecera">
         Elizabeth Marañón (mielmaDev)
       </h1>
-      <nav className="nav-cabecera">
-        <ul className='menu-cabecera'>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
+      <MenuCabecera />
 
     </header>
   );

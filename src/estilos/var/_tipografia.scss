@@ -19,18 +19,31 @@ h3 {
 nav {
   font-family: $montserrat;
   color: $gris-plata;
+  text-decoration: none;
+
+  // ...
+
+  &:hover {
+    color: $rosa;
+  }
 }
 
 nav a {
-  font-family: $montserrat;
-  color: $gris-plata;
-  transition: color 0.2s;
-  text-decoration: none;
+
+  // ...
+  a,
+  .nav__link {
+    font-family: $montserrat;
+    color: $gris-plata;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $rosa;
+    }
+  }
 }
 
-nav a:hover {
-  color: $azul;
-}
 
 ul,
 li {
@@ -41,4 +54,14 @@ li {
 p {
   font-family: $roboto;
   color: $blanco;
+}
+
+a {
+  font-family: $montserrat;
+  color: $gris-plata;
+  text-decoration: none;
+
+  &:hover {
+    color: $rosa;
+  }
 }
