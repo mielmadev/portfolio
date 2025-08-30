@@ -1,10 +1,9 @@
 import './Cabecera.scss';
-import './MenuCabecera';
 import MenuCabecera from './MenuCabecera';
 
 function Cabecera() {
   return (
-    <header>
+    <header role="banner" className="cabecera">
       <h1 className="titulo-cabecera">
         Elizabeth Marañón (mielmaDev)
       </h1>

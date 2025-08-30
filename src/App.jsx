@@ -10,13 +10,11 @@ function App() {
     <BrowserRouter>
       <Cabecera />
       <main className='contenido'>
-        <h1>Bienvenido a mi portfolio</h1>
-        <p>Este es un espacio para mostrar mis proyectos y habilidades.</p>
+        <Routes>
+          <Route path="/sobre-mi" element={<SobreMi />} />
+        </Routes>
+        <Pie />
       </main>
-      <Routes>
-        <Route path="/sobre-mi" element={<SobreMi />} />
-      </Routes>
-      <Pie />
     </BrowserRouter>
   );
 }
